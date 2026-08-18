@@ -12,6 +12,6 @@ import { ReservationSeatModule } from './feature/reservation-seat/reservation-se
 
 @Module({
   imports: [AuthModule, UserModule, MovieModule, ShowtimeModule, CinemaModule, HallModule, ReservationModule, SeatModule, ReservationSeatModule],
-
+  exports: [AuthModule, UserModule, MovieModule, ShowtimeModule, CinemaModule, HallModule, ReservationModule, SeatModule, ReservationSeatModule],
 })
 export class AppModule { }
