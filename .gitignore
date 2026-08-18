@@ -34,6 +34,7 @@ lerna-debug.log*
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+<<<<<<< HEAD
 
 # dotenv environment variable files
 .env
@@ -54,3 +55,14 @@ pids
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+=======
+/generated/prisma
+
+# Env
+.env
+.env.*
+!.env.example
+
+# graphify
+/graphify-out
+>>>>>>> e17fbae9ef2d4a3be7e98ee89c38336f92d88540
