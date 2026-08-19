@@ -1,18 +1,21 @@
 import { Injectable } from '@nestjs/common';
-import { PrismaService } from 'src/core/database/prisma.service';
+
 import { TokenService } from 'src/core/token/token.service';
+import { RegisterDto } from './dto/register.dto';
+import { loginDto } from './dto/login.dto';
+import { ResponseDto } from './dto/response.dto';
 @Injectable()
 export class AuthService {
     constructor(
         private readonly tokenService: TokenService,
-        private readonly prismaService: PrismaService
+
     ) { }
 
-    async register(body: any): Promise<any> {
+    async register(body: RegisterDto): Promise<ResponseDto> {
         return
     }
 
-    async login(body: any): Promise<any> {
+    async login(body: loginDto): Promise<ResponseDto> {
         return
     }
 
@@ -24,7 +27,7 @@ export class AuthService {
         return
     }
 
-    async logout(body: any) {
+    async logout(body: number) {
         return
     }
 }
