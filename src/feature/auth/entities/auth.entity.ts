@@ -9,7 +9,7 @@ export class AuthEntity {
 
     @Expose()
     @Transform(({ value }: { value: Date }) => value?.toISOString())
-    expiresAt: Date;
+    expiredAt: Date;
 
     @Expose()
     @Transform(({ value }: { value: Date }) => value?.toISOString())

@@ -73,7 +73,7 @@ model RefreshToken {
   tokenId   Int       @id @default(autoincrement()) @map("token_id")
   userId    Int       @map("user_id")
   /// sha-256 hex
-  tokenHash String    @unique @map("token_hash") @db.VarChar(64)
+  tokenHash String    @unique @map("token_hash") @db.VarChar(255)
   isRevoked Boolean   @default(false) @map("is_revoked")
   revokedAt DateTime? @map("revoked_at") @db.Timestamptz()
   expiresAt DateTime  @map("expires_at") @db.Timestamptz()

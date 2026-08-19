@@ -1,14 +1,15 @@
 import { Injectable } from "@nestjs/common";
 import { JwtService, JwtSignOptions } from "@nestjs/jwt";
 import { AppConfigService } from "../config/config.service";
+import { Role } from "generated/prisma/client";
 export interface AccessTokenPayload {
-    id: string;
-    role: string;
+    id: number;
+    role: Role;
     email: string;
     username: string;
 }
 export interface RefreshTokenPayload {
-    id: string;
+    id: number;
 }
 @Injectable()
 export class TokenService {

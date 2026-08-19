@@ -47,26 +47,26 @@ ALTER TABLE "reservation_seat" DROP CONSTRAINT "reservation_seat_showtime_id_hal
 
 -- AlterTable
 ALTER TABLE "payment" DROP CONSTRAINT "payment_pkey",
-ALTER COLUMN "payment_id" SET DATA TYPE SERIAL,
+ALTER COLUMN "payment_id" SET DATA TYPE INTEGER,
 ALTER COLUMN "reservation_id" SET DATA TYPE INTEGER,
 ADD CONSTRAINT "payment_pkey" PRIMARY KEY ("payment_id");
 
 -- AlterTable
 ALTER TABLE "refresh_token" DROP CONSTRAINT "refresh_token_pkey",
-ALTER COLUMN "token_id" SET DATA TYPE SERIAL,
+ALTER COLUMN "token_id" SET DATA TYPE INTEGER,
 ALTER COLUMN "user_id" SET DATA TYPE INTEGER,
 ADD CONSTRAINT "refresh_token_pkey" PRIMARY KEY ("token_id");
 
 -- AlterTable
 ALTER TABLE "reservation" DROP CONSTRAINT "reservation_pkey",
-ALTER COLUMN "reservation_id" SET DATA TYPE SERIAL,
+ALTER COLUMN "reservation_id" SET DATA TYPE INTEGER,
 ALTER COLUMN "user_id" SET DATA TYPE INTEGER,
 ALTER COLUMN "showtime_id" SET DATA TYPE INTEGER,
 ADD CONSTRAINT "reservation_pkey" PRIMARY KEY ("reservation_id");
 
 -- AlterTable
 ALTER TABLE "reservation_seat" DROP CONSTRAINT "reservation_seat_pkey",
-ALTER COLUMN "ticket_id" SET DATA TYPE SERIAL,
+ALTER COLUMN "ticket_id" SET DATA TYPE INTEGER,
 ALTER COLUMN "reservation_id" SET DATA TYPE INTEGER,
 ALTER COLUMN "showtime_id" SET DATA TYPE INTEGER,
 ALTER COLUMN "seat_id" SET DATA TYPE INTEGER,
@@ -74,17 +74,17 @@ ADD CONSTRAINT "reservation_seat_pkey" PRIMARY KEY ("ticket_id");
 
 -- AlterTable
 ALTER TABLE "seat" DROP CONSTRAINT "seat_pkey",
-ALTER COLUMN "seat_id" SET DATA TYPE SERIAL,
+ALTER COLUMN "seat_id" SET DATA TYPE INTEGER,
 ADD CONSTRAINT "seat_pkey" PRIMARY KEY ("seat_id");
 
 -- AlterTable
 ALTER TABLE "showtime" DROP CONSTRAINT "showtime_pkey",
-ALTER COLUMN "showtime_id" SET DATA TYPE SERIAL,
+ALTER COLUMN "showtime_id" SET DATA TYPE INTEGER,
 ADD CONSTRAINT "showtime_pkey" PRIMARY KEY ("showtime_id");
 
 -- AlterTable
 ALTER TABLE "users" DROP CONSTRAINT "users_pkey",
-ALTER COLUMN "user_id" SET DATA TYPE SERIAL,
+ALTER COLUMN "user_id" SET DATA TYPE INTEGER,
 ADD CONSTRAINT "users_pkey" PRIMARY KEY ("user_id");
 
 -- AddForeignKey
